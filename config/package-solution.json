@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "growth-mapping-client-side-solution",
+    "id": "f8f427de-39e4-4c78-9598-71dcfbefc925",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.14.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "GrowthMapping description"
+      },
+      "longDescription": {
+        "default": "GrowthMapping description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "growth-mapping Feature",
+        "description": "The feature that activates elements of the growth-mapping solution.",
+        "id": "d0d07308-d994-4654-b857-8165035c2e03",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/growth-mapping.sppkg"
+  }
+}

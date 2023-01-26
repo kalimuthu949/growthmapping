@@ -1,0 +1,16 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "version": "1.14.0",
+    "libraryName": "growth-mapping",
+    "libraryId": "f8f427de-39e4-4c78-9598-71dcfbefc925",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "GrowthMapping",
+    "solutionShortDescription": "GrowthMapping description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

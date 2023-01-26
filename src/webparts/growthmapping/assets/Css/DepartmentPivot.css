@@ -1,0 +1,24 @@
+.clsgrowthmapping 
+{
+    border: 2px solid rgba(0,0,0,.15);
+}
+.clsgrowthmapping .MuiTreeItem-content {
+    background-color: #D8F4F7;
+    margin-bottom: 1px;
+    color: #03606a;
+}
+
+.clsgrowthmapping .MuiTreeItem-group .MuiTreeItem-content
+{
+    background-color: #fff;
+}
+
+.clsgrowthmapping .MuiTreeItem-group {
+    margin: 0;
+    padding: 0;
+    margin-left: 0px;
+}
+
+.clsgrowthmapping .MuiTreeItem-content .MuiTreeItem-label:hover {
+    background-color:#FFE49F;
+}

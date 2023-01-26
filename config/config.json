@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "growthmapping-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/growthmapping/GrowthmappingWebPart.js",
+          "manifest": "./src/webparts/growthmapping/GrowthmappingWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "GrowthmappingWebPartStrings": "lib/webparts/growthmapping/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+  }
+}
