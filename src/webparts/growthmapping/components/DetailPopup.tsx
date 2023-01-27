@@ -1,7 +1,8 @@
-import * as React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Modal from '@material-ui/core/Modal';
-import DetailTable from './DetailTable';
+import * as React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Modal from "@material-ui/core/Modal";
+import DetailTable from "./DetailTable";
+import Typography from "@material-ui/core/Typography";
 
 function rand() {
   return Math.round(Math.random() * 20) - 10;
@@ -10,22 +11,21 @@ function rand() {
 function getModalStyle() {
   const top = 50 + rand();
   const left = 50 + rand();
-
-  return {
-    top: `${top}%`,
-    left: `${left}%`,
-    transform: `translate(-${top}%, -${left}%)`,
-  };
+  return;
+  // return {
+  //   top: `${top}%`,
+  //   left: `${left}%`,
+  //   transform: `translate(-${top}%, -${left}%)`,
+  // };
 }
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    position: 'absolute',
-    width: "80%",
-    top: "50% !important",
-    left: "50% !important",
+    minHeight: "10vh",
+    maxHeight: "90vh",
+    maxWidth: "90vw",
+    overflow: "auto",
     backgroundColor: theme.palette.background.paper,
-    border: '2px solid #000',
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
   },
@@ -39,15 +39,21 @@ export default function DetailPopup(props) {
     props.closeclick();
   };
   const body = (
-    <div style={modalStyle} className={classes.paper}>
-      <h2 id="simple-modal-title">{props.Department} Growth Map</h2>
-      <DetailTable itemdetails={props.itemdetails}/>
+    <div className={classes.paper}>
+      <Typography className="modalHeader">
+        {props.Department} Growth Map
+      </Typography>
+      <DetailTable itemdetails={props.itemdetails} />
+      <div className="modalBtnSection">
+        <button onClick={handleClose}>Close</button>
+      </div>
     </div>
   );
 
   return (
     <div>
       <Modal
+        className="DepartmentModal"
         open={props.modal}
         onClose={handleClose}
         aria-labelledby="simple-modal-title"
