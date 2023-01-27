@@ -29,7 +29,7 @@ export default function DepartmentPivot() {
     let listdata = [];
     let listchoices = [];
     await sp.web.lists
-      .getByTitle("DepartmentList")
+      .getByTitle("Growth Mapping")
       .items.top(5000)
       .get()
       .then(function (data) {
@@ -63,7 +63,7 @@ export default function DepartmentPivot() {
   async function getDatafromsharepoint(itemID) {
     //await Commonservice.SPReadItemUsingId({Listname:"DepartmentList",SelectedId:itemID,Select:"*"}).then(function(data)
     await sp.web.lists
-      .getByTitle("DepartmentList")
+      .getByTitle("Growth Mapping")
       .items.getById(itemID)
       .get()
       .then(function (data) {
@@ -127,6 +127,7 @@ export default function DepartmentPivot() {
         Department={selectedDept}
         closeclick={modalclose}
       />
+      {items.length==0?<div className="clsNodata">No data Found</div>:""}
     </div>
   );
 }

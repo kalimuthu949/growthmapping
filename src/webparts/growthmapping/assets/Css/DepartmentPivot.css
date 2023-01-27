@@ -81,3 +81,16 @@
 .childItem .MuiTypography-root {
     font-weight: 400;
 }
+
+.clsNodata
+{
+    
+    width: 100%;
+    background-color: #D8F4F7;
+    margin-bottom: 1px;
+    padding-top: 20px;
+    color: #03606a;
+    height: 50px;
+    text-align: center;
+
+}
