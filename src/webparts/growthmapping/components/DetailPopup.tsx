@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     minHeight: "10vh",
     maxHeight: "90vh",
-    maxWidth: "90vw",
+    maxWidth: "70vw",
     overflow: "auto",
     backgroundColor: theme.palette.background.paper,
     boxShadow: theme.shadows[5],

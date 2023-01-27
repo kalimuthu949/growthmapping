@@ -55,6 +55,10 @@
     color: #03606a;
 }
 
+.modalTable td {
+    width: 30%;
+}
+
 .modalBtnSection {
     display: flex;
     justify-content: flex-end;
