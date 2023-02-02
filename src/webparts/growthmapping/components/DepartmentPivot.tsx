@@ -51,8 +51,12 @@ export default function DepartmentPivot() {
               Department: data[i].Department,
             });
           }
-          console.log(listdata);
-          setitems([...listdata]);
+          let arrSort = listdata.sort(function(a, b){
+            if(a.Department < b.Department) { return -1; }
+            if(a.Department > b.Department) { return 1; }
+            return 0;
+        });
+          setitems([...arrSort]);
         }
       })
       .catch(function (error) {
@@ -92,14 +96,20 @@ export default function DepartmentPivot() {
         defaultCollapseIcon={<ExpandMoreIcon />}
         defaultExpandIcon={<ChevronRightIcon />}
       >
-        {items.map(function (item, index) {
+        {items.map(function (item, index) 
+        {
+          let arrSortPosition = item.Details.sort(function(a, b){
+            if(a.Position < b.Position) { return -1; }
+            if(a.Position > b.Position) { return 1; }
+            return 0;
+        });
           return (
             <TreeItem
               className="parentItem"
               nodeId={index.toString()}
               label={item.Department}
             >
-              {item.Details.map(function (seconditem, index) {
+              {arrSortPosition.map(function (seconditem, index) {
                 let labelvalue = seconditem.Position;
                 return (
                   <TreeItem
