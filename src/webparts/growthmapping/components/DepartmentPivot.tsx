@@ -49,6 +49,7 @@ export default function DepartmentPivot() {
               ID: data[i].ID,
               Position: data[i].Position,
               Department: data[i].Department,
+              OrderNumber:data[i].OrderNumber?data[i].OrderNumber:0,
             });
           }
           let arrSort = listdata.sort(function(a, b){
@@ -77,6 +78,7 @@ export default function DepartmentPivot() {
           rows.push({
             Department: data.Department,
             Position: data.Position,
+            OrderNumber:data.OrderNumber?data.OrderNumber:0,
             BehavioralTraits: data["BehavioralTraits"],
             TechnicalTraits: data["TechnicalTraits"],
             RoleDesciption: data["RoleDesciption"],
@@ -99,10 +101,11 @@ export default function DepartmentPivot() {
         {items.map(function (item, index) 
         {
           let arrSortPosition = item.Details.sort(function(a, b){
-            if(a.Position < b.Position) { return -1; }
-            if(a.Position > b.Position) { return 1; }
+            if(a.OrderNumber < b.OrderNumber) { return -1; }
+            if(a.OrderNumber > b.OrderNumber) { return 1; }
             return 0;
         });
+        console.log(arrSortPosition);
           return (
             <TreeItem
               className="parentItem"

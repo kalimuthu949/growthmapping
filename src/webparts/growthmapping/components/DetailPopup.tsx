@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function DetailPopup(props) {
+  console.log(props);
   const classes = useStyles();
   // getModalStyle is not a pure function, we roll the style only on the first render
   const [modalStyle] = React.useState(getModalStyle);
@@ -42,6 +43,9 @@ export default function DetailPopup(props) {
     <div className={classes.paper}>
       <Typography className="modalHeader">
         {props.Department} Growth Map
+      </Typography>
+      <Typography className="modalHeader">
+        {props.itemdetails.length>0?props.itemdetails[0].Position:""}
       </Typography>
       <DetailTable itemdetails={props.itemdetails} />
       <div className="modalBtnSection">

@@ -32,7 +32,7 @@ export default function DetailTable(props) {
           <TableRow>
             <TableCell>Behavioral Traits</TableCell>
             <TableCell>Technical Traits</TableCell>
-            <TableCell>Role Desciption</TableCell>
+            <TableCell>Role Description</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
