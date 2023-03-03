@@ -158,11 +158,12 @@ td {
 
 .modalTable th {
     color: #03606a;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .modalTable td {
     width: 30%;
+    vertical-align: top !important;
 }
 
 .modalBtnSection {
