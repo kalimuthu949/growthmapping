@@ -132,7 +132,7 @@ export default function DepartmentPivot() {
                       setselectedDept(seconditem.Department);
                       setTimeout(() => {
                         setmodalopen(true);
-                      }, 300);
+                      }, 500);
 
                       setreload(!reload);
                     }}
