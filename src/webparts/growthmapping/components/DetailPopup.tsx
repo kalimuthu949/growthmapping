@@ -45,7 +45,7 @@ export default function DetailPopup(props) {
         {props.Department} Growth Map
       </Typography>
       <Typography className="modalHeader">
-        {props.itemdetails.length>0?props.itemdetails[0].Position:""}
+        {props.itemdetails.length > 0 ? props.itemdetails[0].Position : ""}
       </Typography>
       <DetailTable itemdetails={props.itemdetails} />
       <div className="modalBtnSection">

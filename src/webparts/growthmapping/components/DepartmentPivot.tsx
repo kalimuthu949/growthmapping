@@ -49,14 +49,18 @@ export default function DepartmentPivot() {
               ID: data[i].ID,
               Position: data[i].Position,
               Department: data[i].Department,
-              OrderNumber:data[i].OrderNumber?data[i].OrderNumber:0,
+              OrderNumber: data[i].OrderNumber ? data[i].OrderNumber : 0,
             });
           }
-          let arrSort = listdata.sort(function(a, b){
-            if(a.Department < b.Department) { return -1; }
-            if(a.Department > b.Department) { return 1; }
+          let arrSort = listdata.sort(function (a, b) {
+            if (a.Department < b.Department) {
+              return -1;
+            }
+            if (a.Department > b.Department) {
+              return 1;
+            }
             return 0;
-        });
+          });
           setitems([...arrSort]);
         }
       })
@@ -78,7 +82,7 @@ export default function DepartmentPivot() {
           rows.push({
             Department: data.Department,
             Position: data.Position,
-            OrderNumber:data.OrderNumber?data.OrderNumber:0,
+            OrderNumber: data.OrderNumber ? data.OrderNumber : 0,
             BehavioralTraits: data["BehavioralTraits"],
             TechnicalTraits: data["TechnicalTraits"],
             RoleDesciption: data["RoleDesciption"],
@@ -98,14 +102,17 @@ export default function DepartmentPivot() {
         defaultCollapseIcon={<ExpandMoreIcon />}
         defaultExpandIcon={<ChevronRightIcon />}
       >
-        {items.map(function (item, index) 
-        {
-          let arrSortPosition = item.Details.sort(function(a, b){
-            if(a.OrderNumber < b.OrderNumber) { return -1; }
-            if(a.OrderNumber > b.OrderNumber) { return 1; }
+        {items.map(function (item, index) {
+          let arrSortPosition = item.Details.sort(function (a, b) {
+            if (a.OrderNumber < b.OrderNumber) {
+              return -1;
+            }
+            if (a.OrderNumber > b.OrderNumber) {
+              return 1;
+            }
             return 0;
-        });
-        console.log(arrSortPosition);
+          });
+          console.log(arrSortPosition);
           return (
             <TreeItem
               className="parentItem"
@@ -123,7 +130,10 @@ export default function DepartmentPivot() {
                       var test = seconditem.ID;
                       getDatafromsharepoint(seconditem.ID);
                       setselectedDept(seconditem.Department);
-                      setmodalopen(true);
+                      setTimeout(() => {
+                        setmodalopen(true);
+                      }, 300);
+
                       setreload(!reload);
                     }}
                   />
@@ -140,7 +150,7 @@ export default function DepartmentPivot() {
         Department={selectedDept}
         closeclick={modalclose}
       />
-      {items.length==0?<div className="clsNodata">No data Found</div>:""}
+      {items.length == 0 ? <div className="clsNodata">No data Found</div> : ""}
     </div>
   );
 }
